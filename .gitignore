@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Config / secrets
+config.env
+*.env
+!config.example.env
+!config_example.env
+
+# Runtime / output
+success.json
+*.log
+grab_a1.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

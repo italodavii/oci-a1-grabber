@@ -1,0 +1,18 @@
+[Unit]
+Description=OCI Always Free A1.Flex grabber
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=opc
+WorkingDirectory=/opt/grab_a1
+EnvironmentFile=/opt/grab_a1/config.env
+ExecStart=/opt/grab_a1/.venv/bin/python /opt/grab_a1/grab_a1.py
+Restart=on-failure
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
